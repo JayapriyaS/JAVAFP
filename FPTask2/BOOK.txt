@@ -1,0 +1,54 @@
+/*BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();//creates table
+		Session session = sf.openSession();
+		int i=0;
+		while(i<1){ 
+			i++;
+		
+		session.beginTransaction();*/
+		
+		
+		/*System.out.print("Enter ID");
+		int id = Integer.valueOf(bf.readLine());*/
+		/*System.out.print("Enter NAME");
+		String name = bf.readLine();
+		System.out.print("Enter EMAIL ");
+		String email = bf.readLine();
+		System.out.print("Enter PHONE");
+		long phno = Long.valueOf(bf.readLine());
+		
+		
+		Employee employee = new Employee( name, email, phno);
+		System.out.print("Enter ID");
+		int id = Integer.valueOf(bf.readLine());
+		System.out.print("Enter BOOK_NAME");
+		String book_Name = bf.readLine();
+		System.out.print("Enter PUBLISHER");
+		String publisher = bf.readLine();;
+		System.out.print("Enter AUTHOR");
+		String author = bf.readLine();;
+		System.out.print("Enter PRICE");
+		double price = Double.valueOf(bf.readLine());
+		System.out.print("Enter PUBLISHED_DATE");
+		Date published_Date = new Date(bf.readLine());
+		System.out.print("Enter ISBN_NO");
+		String isbn_No = bf.readLine();;
+		Book book = new Book(id, book_Name, publisher, author, price, published_Date, isbn_No);
+		//System.out.println("Id : " + employee.getId());
+		System.out.println("Name  : " + employee.getName());
+		System.out.println("Email : " + employee.getEmail());
+		System.out.println("Phone : " + employee.getPhone());
+		System.out.println("Book_Name  : " + book.getBook_Name());
+		System.out.println("Publisher  : " + book.getPublisher());
+		System.out.println("Author  : " + book.getAuthor());
+		System.out.println("Price  : " + book.getPrice());
+		System.out.println("Published_date  : " + book.getPublished_Date());
+		System.out.println("Isbn_No  : " + book.getIsbn_No());
+		session.save(employee);
+		session.save(book);
+		session.getTransaction().commit();
+	}
+		session.close();
+		//sf.close();
+	}*/
+

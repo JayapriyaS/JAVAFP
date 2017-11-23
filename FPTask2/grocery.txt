@@ -1,0 +1,88 @@
+package org.main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+//import java.util.Date;
+import java.util.Date;
+
+import org.grocery.stock.Item;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.isbn.bk.Book;
+import org.sample.emp.Employee;
+
+public class Solution {
+
+	// private static final String TotalNoOfProducts = null;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+		SessionFactory sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();// creates
+																										// table
+		Session session = sf.openSession();
+		
+		
+		
+		
+		
+	//Item item=session.get(Item.class,1);
+	
+		//session.beginTransaction();
+	//	item.setName("priya");
+	//	session.update(item);
+	//	session.getTransaction().commit();
+	//System.out.println(item.getName());
+	/*	Item item =new Item();
+		item.setId(1);
+		session.delete(item);
+		session.getTransaction().commit();*/
+
+		while (true) {
+
+			//int i=1;
+			int ch;
+			System.out.println("Enter value:");
+			ch = Integer.valueOf(bf.readLine());
+			
+			switch (ch) {
+			case 1:
+
+				session.beginTransaction();
+				int id;
+				String name;
+				int quantity;
+				double price;
+
+				System.out.print("Enter ID");
+				id = Integer.valueOf(bf.readLine());
+				System.out.print("Enter NAME");
+				name = bf.readLine();
+				System.out.print("Enter QUANTITY");
+				quantity = Integer.valueOf(bf.readLine());
+				System.out.print("Enter PRICE");
+				price = Double.valueOf(bf.readLine());
+				Item item = new Item(id, name, quantity, price);
+
+				session.save(item);
+				session.getTransaction().commit();
+				session.close();
+				break;
+				
+
+			case 2:
+
+				System.out.println("Total Number of Products:" + Item.getTotalNoOfProducts());
+				break;
+			default:
+				break;
+		
+			}
+		}
+	}
+}
+			
+			
